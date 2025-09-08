@@ -15,6 +15,14 @@ public class CommandIngresarProducto implements Command{
 
     @Override
     public void ejecutar() {
-        inventario.agregarProducto(producto);
+        if(inventario.existeProducto(producto.getCodigo())){
+            System.out.println("El codigo del producto ingresado ya existe.");
+            System.out.println("Ingresa un nuevo codigo");
+        }else{
+            inventario.agregarProducto(producto);
+            System.out.println("Producto Agregado de forma correcta al Inventario");
+            System.out.println();
+        }
+
     }
 }

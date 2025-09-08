@@ -17,7 +17,6 @@ public class CommandEliminarProducto implements Command{
         if(inventario.eliminarProducto(codigo)){
             System.out.println("Producto codigo: " + codigo + " ha sido eliminado de forma correcta" );
             System.out.println();
-
         }else{
             System.out.println("Código invalido");
             System.out.println();
